@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [[ "$#" -ne 1 ]]; then
+    echo "Usage: ./execute path/to/image.rgba"
+    exit 1
+fi
+
+gcc smooth.c -o smooth -lpthread -Wall
+./smooth $1
+chmod 644 $1.new
+convert -size 512x512 -depth 8 rgba:$1.new $1_new.tiff
+rm $1.new
+gwenview $1_new.tiff
