@@ -324,19 +324,6 @@ int main(int argc, char **argv)
 	return 0;
 }
 
-// script simples para executar rapidamente o código:
-// execute.sh
-// #!/bin/bash
-//
-// # nao esquecer de passar a imagem como argumento
-// gcc paralelo.c -o smooth -lpthread
-// ./smooth $1
-// chmod 644 $1.new
-// convert -size 512x512 -depth 8 rgba:$1.new $1_new.tiff
-// rm $1.new
-// # trocar gwenview pelo seu visualizador de imagens
-// gwenview $1_new.tiff
-
 // minha implementação sequencial:
 
 // #include <stdio.h>

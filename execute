@@ -8,6 +8,6 @@ fi
 gcc smooth.c -o smooth -lpthread -Wall
 ./smooth $1
 chmod 644 $1.new
-convert -size 512x512 -depth 8 rgba:$1.new $1_new.tiff
+convert -size 512x512 -depth 8 rgba:$1.new $1_new.png
 rm $1.new
-gwenview $1_new.tiff
+gwenview $1_new.png
